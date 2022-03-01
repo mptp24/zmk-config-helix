@@ -26,17 +26,17 @@ As such, those are in use within the default layer at this time.*/
  
               default_layer {
  // ---------------------------------------------------------------------------------------------------------------------------------
- // | GRAVE  |   1    |   2    |   3    |   4    |   5    |                                      |   6    |   7    |   8    |   9    |   0    |  DEL   |
- // |  TAB   |   Q    |   W    |   E    |   R    |   T    |                                      |   Y    |   U    |   I    |   O    |   P    |  BSPC  |
- // |  CTRL  |   A    |   S    |   D    |   F    |   G    |                                      |   H    |   J    |   K    |   L    |   ;    |   '    |
- // |  SHIFT |   Z    |   X    |   C    |   V    |   B    |  LBKT  |                    |  RBKT  |   N    |   M    |   ,    |   .    |   /    |  RET   |
- // | ADJUST |  ESC   |  ALT   |  LGUI  | EISUU  | LOWER  | SPACE  |                    |  SPACE | RAISE  |  KANA  |  LEFT  |  DOWN  |  UP    |  RIGHT |
+ // |  ESC   |   1    |   2    |   3    |   4    |   5    |                                      |   6    |   7    |   8    |   9    |   0    |  BSPC  |
+ // |  ESC   |   Q    |   W    |   E    |   R    |   T    |                                      |   Y    |   U    |   I    |   O    |   P    |  BSPC  |
+ // |  TAB   |   A    |   S    |   D    |   F    |   G    |                                      |   H    |   J    |   K    |   L    |   ;    |   '    |
+ // |  SHIFT |   Z    |   X    |   C    |   V    |   B    |  BT_CLR|                    |  SPACE |   N    |   M    |   ,    |   .    |   /    |  SHIFT |
+ // | LCTRL  |  LGUI  |  LALT  |  SPACE | LOWER  | SPACE  |BT_SEL 0|                    |  SPACE | SPACE  | RAISE  |  LANG1 |  DOWN  |  UP    |  ENTER |
                      bindings = <
-       &kp ESC  &kp N1  &kp N2   &kp N3   &kp N4    &kp N5                               &kp N6    &kp N7    &kp N8    &kp N9     &kp N0    &kp DEL
+       &kp ESC  &kp N1  &kp N2   &kp N3   &kp N4    &kp N5                               &kp N6    &kp N7    &kp N8    &kp N9     &kp N0    &kp BSPC
        &kp ESC    &kp Q   &kp W    &kp E    &kp R     &kp T                                &kp Y     &kp U     &kp I     &kp O      &kp P     &kp BSPC
        &kp TAB  &kp A   &kp S    &kp D    &kp F     &kp G                                &kp H     &kp J     &kp K     &kp L      &kp SEMI  &kp SQT
-       &kp LSHFT  &kp Z   &kp X    &kp C    &kp V     &kp B     &kp SPACE         &kp RBKT  &kp N     &kp M     &kp COMMA &kp PERIOD &kp SLASH &kp RET
-       &kp LCTRL &kp LGUI &kp LALT &kp SPACE &kp SPACE &kp SPACE &kp SPACE        &kp SPACE &mo RAISE &kp LANG1 &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT
+       &kp LSHFT  &kp Z   &kp X    &kp C    &kp V     &kp B     &bt BT_CLR         &kp SPACE  &kp N     &kp M     &kp COMMA &kp PERIOD &kp SLASH &kp RSHIFT
+       &kp LCTRL &kp LGUI &kp LALT &kp SPACE &mo LOWER &kp SPACE &bt BT_SEL 0       &kp SPACE &kp SPACE &mo RAISE &kp LANG1  &kp DOWN   &kp UP    &kp ENTER
                      >;
               };
               lower_layer {
