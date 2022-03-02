@@ -32,11 +32,11 @@ As such, those are in use within the default layer at this time.*/
  // |  SHIFT |   Z    |   X    |   C    |   V    |   B    | reset  |                  |  reset |   N    |   M    |   ,    |   .    |   /    |  SHIFT |
  // | LCTRL  |  LGUI  |  LALT  |  SPACE | LOWER  | SPACE  | SPACE  |                  |  SPACE | SPACE  | RAISE  |  LANG1 |CAPSLOCK| NONE   |  ENTER |
                      bindings = <
-    &kp ESC   &kp N1   &kp N2   &kp N3    &kp N4    &kp N5                                 &kp N6    &kp N7    &kp N8     &kp N9       &kp N0    &kp BSPC
-    &kp ESC   &kp Q    &kp W    &kp E     &kp R     &kp T                                  &kp Y     &kp U     &kp I      &kp O        &kp P     &kp BSPC
-    &kp TAB   &kp A    &kp S    &kp D     &kp F     &kp G                                  &kp H     &kp J     &kp K      &kp L        &kp SEMI  &kp SQT
-    &kp LSHFT &kp Z    &kp X    &kp C     &kp V     &kp B     &reset             &reset    &kp N     &kp M     &kp COMMA  &kp PERIOD   &kp SLASH &kp RSHIFT
-    &kp LCTRL &kp LGUI &kp LALT &kp SPACE &mo LOWER &kp SPACE &kp SPACE          &kp SPACE &kp SPACE &mo RAISE &kp LANG1  &kp CAPSLOCK &kp NONE  &kp ENTER
+    &kp ESC   &kp N1   &kp N2   &kp N3    &kp N4    &kp N5                                 &kp N6    &kp N7    &kp N8     &kp N9      &kp N0    &kp BSPC
+    &kp ESC   &kp Q    &kp W    &kp E     &kp R     &kp T                                  &kp Y     &kp U     &kp I      &kp O       &kp P     &kp BSPC
+    &kp TAB   &kp A    &kp S    &kp D     &kp F     &kp G                                  &kp H     &kp J     &kp K      &kp L       &kp SEMI  &kp SQT
+    &kp LSHFT &kp Z    &kp X    &kp C     &kp V     &kp B     &reset             &reset    &kp N     &kp M     &kp COMMA  &kp PERIOD  &kp SLASH &kp RSHIFT
+    &kp LCTRL &kp LGUI &kp LALT &kp SPACE &mo LOWER &kp SPACE &kp SPACE          &kp SPACE &kp SPACE &mo RAISE &kp LANG1  &kp CAPS    &kp NONE  &kp ENTER
                      >;
               };
               lower_layer {
@@ -56,32 +56,32 @@ As such, those are in use within the default layer at this time.*/
               };
               raise_layer {
  // ---------------------------------------------------------------------------------------------------------------------------------
- // |       |       |       |       |       |       |                                    |       | LC(L) |   UP  | LC(R) |  DEL  | BSPC  |
- // |       |       |       |       |       |       |                                    |       | LC(L) |   UP  | LC(R) |  DEL  | BSPC  |
- // |       |       |       |       |       |       |                                    |  HOME | LEFT  |  DOWN | RIGHT |  END  |       |
- // |       |       |       |       |       |       |       |                    |       |       |       |       |       |       |       |
- // |       |       |       |       |       |       |       |                    |       |       |       |       |       |       |       |
+ // |       |       |       |       |       |       |                                 |       |       |       |       |       |       |
+ // |       |       |       |       |       |       |                                 |       | LC(L) |   UP  | LC(R) |  DEL  | BSPC  |
+ // |       |       |       |       |       |       |                                 |  HOME | LEFT  |  DOWN | RIGHT |  END  |       |
+ // |       |       |       |       |       |       |       |                 |       |       |       |       |       |       |       |
+ // |       |       |       |       |       |       |       |                 |       |       |       |       |       |       |       |
                      bindings = <
-    &trans    &trans &trans &trans &trans  &trans                       &trans  &trans    &trans     &trans       &trans       &trans
-    &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4  &kp N5                       &kp N6  &kp N7    &kp N8     &kp N9       &kp N0       &kp DEL
-    &trans    &kp F1 &kp F2 &kp F3 &kp F4  &kp F5                       &kp F6  &kp MINUS &kp EQUAL  &kp LBKT     &kp RBKT     &kp BSLH
-    &trans    &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &trans        &trans &kp F12 &trans    &kp PSCRN  &kp PG_DN    &kp PG_UP    &trans
-    &trans    &trans &trans &trans &trans  &trans  &trans        &trans &trans  &trans    &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
+    &trans    &trans &trans &trans &trans  &trans                                      &trans   &trans   &trans    &trans    &trans   &trans
+    &trans    &trans &trans &trans &trans  &trans                                      &trans   &kp LC(LEFT)  &kp UP  &kp LC(RIGHT)  &kp DEL  &kp BSPC
+    &trans    &trans &trans &trans &trans  &trans                                      &kp HOME &kp LEFT &kp DOWN  &kp RIGHT &kp END &trans
+    &trans    &trans &trans &trans &trans  &trans  &trans                      &trans  &trans   &trans   &trans    &trans    &trans   &trans
+    &trans    &trans &trans &trans &trans  &trans  &trans                      &trans  &trans   &trans   &trans    &trans    &trans   &trans
                      >;
               };
               adjust_layer {
  // ---------------------------------------------------------------------------------------------------------------------------------
- // |    `     |    !     |    @     |    #     |    $     |    %     |                                        |            |          |          |          |          |          |
- // |  BT CLR  | BT SEL0  | BT SEL1  | BT SEL2  | BGT SEL3 | BT SEL4  |                                        |            |          |          |          |          |          |
- // |  BT NXT  | OUT TOG  | OUT USB  | OUT BLE  |          |          |                                        |   VOL_UP   |          |          |          |          |          |
- // |  BT PRV  |          |          |          |          |          |          |                  |          |   VOL_DN   |          |          |          |          |          |
- // |          |          |          |          |          |          |          |                  |          |            |          |          |          |          |          |
+ // |    `     |    !     |    @     |    #     |    $     |    %     |                                        |            |       |       |       |       |       |
+ // |  BT CLR  | BT SEL0  | BT SEL1  | BT SEL2  | BGT SEL3 | BT SEL4  |                                        |            |       |       |       |       |       |
+ // |  BT NXT  | OUT TOG  | OUT USB  | OUT BLE  |          |          |                                        |   VOL_UP   |       |       |       |       |       |
+ // |  BT PRV  |          |          |          |          |          |          |                  |          |   VOL_DN   |       |       |       |       |       |
+ // |          |          |          |          |          |          |          |                  |          |            |       |       |       |       |       |
                      bindings = <
-       &kp GRAVE  &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT                             &trans          &trans          &trans          &trans          &trans          &trans
-       &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                          &trans          &trans          &trans          &trans          &trans          &trans
-       &bt BT_NXT &out OUT_TOG &out OUT_USB &out OUT_BLE &trans       &trans                                &kp C_VOL_UP    &trans          &trans          &trans          &trans          &trans
-       &bt BT_PRV &trans       &trans       &trans       &trans       &trans       &trans          &trans   &kp C_VOL_DN    &trans          &trans          &trans          &trans          &trans
-       &trans     &trans       &trans       &trans       &trans       &trans       &trans          &trans   &trans          &trans          &trans          &trans          &trans          &trans
+       &trans     &trans       &trans       &trans       &trans       &trans                                &trans        &trans  &trans   &trans  &trans  &trans
+       &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                          &trans        &trans  &trans   &trans  &trans  &trans
+       &bt BT_NXT &out OUT_TOG &out OUT_USB &out OUT_BLE &trans       &trans                                &kp C_VOL_UP  &trans  &trans   &trans  &trans  &trans
+       &bt BT_PRV &trans       &trans       &trans       &trans       &trans       &trans          &trans   &kp C_VOL_DN  &trans  &trans   &trans  &trans  &trans
+       &trans     &trans       &trans       &trans       &trans       &trans       &trans          &trans   &trans        &trans  &trans   &trans  &trans  &trans
                      >;
               };
        };
